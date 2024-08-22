@@ -1,6 +1,6 @@
 let config= {
     cUrl : " https://api.countrystatecity.in/v1/countries",
-    cKey: ""
+    cKey: "a3NuT3hNTUc3WE9NSWU3OG0zNlhROXlDdXlyN0RxWjV0QjdIVm5Dbw=="
 //https://dr5hn.github.io/countries-states-cities-database/
 }
 
