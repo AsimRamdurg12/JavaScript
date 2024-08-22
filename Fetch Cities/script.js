@@ -29,14 +29,14 @@ function loadCountries(){
     stateSelect.disabled = true;
     citySelect.disabled = true;
     stateSelect.style.pointerEvents = 'none';
-    stateSelect.style.pointerEvents = 'none';
+    citySelect.style.pointerEvents = 'none';
 }
 
 function loadStates() {
     stateSelect.disabled = false;
     citySelect.disabled = true;
     stateSelect.style.pointerEvents = 'auto';
-    stateSelect.style.pointerEvents = 'none';
+    citySelect.style.pointerEvents = 'none';
 
 
 const selectedCountryCode = countrySelect.value;
@@ -61,13 +61,13 @@ fetch(`${config.cUrl}/${selectedCountryCode}/states`, {headers:{"X-CSCAPI-KEY":c
 function loadCities() {
 
     citySelect.disabled = false;
-    stateSelect.style.pointerEvents = 'auto';
+    citySelect.style.pointerEvents = 'auto';
 
 
     const selectedCountryCode = countrySelect.value;
     const selectedStateCode = stateSelect.value;
 // console.log(countrySelect.value)
-stateSelect.innerHTML = `<option value="">Select State</option>` // for clearing the existing states.
+citySelect.innerHTML = `<option value="">Select City</option>` // for clearing the existing cities.
 fetch(`${config.cUrl}/${selectedCountryCode}/states/${selectedStateCode}/cities`, {headers:{"X-CSCAPI-KEY":config.cKey}})    
 .then(response => response.json())
 .then(data => {
